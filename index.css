@@ -212,20 +212,61 @@ button:hover {
 }
 
 .modal-content h2 {
-    color: var(--danger-color);
-    font-size: 28px;
-    margin-bottom: 20px;
+    color: #2b2927;
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+}
+
+.modal-content p {
+    color: var(--text-secondary);
+    font-size: 17px;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
 }
 
 .modal-content button {
-    background-color: var(--danger-color);
+    background-color: #2b2927;
+    margin: 20px 0 0 0;
 }
 
 .modal-content button:hover {
-    background-color: #ff1a1a;
-    box-shadow: 0 4px 12px rgba(255, 59, 59, 0.3);
+    background-color: #403e3c;
+    box-shadow: 0 4px 12px rgba(43, 41, 39, 0.3);
 }
 
+.scam-detail {
+    background-color: var(--background-dark);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.scam-detail h3 {
+    color: var(--danger-color);
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    text-transform: none;
+    text-align: left;
+}
+
+.scam-detail p {
+    color: var(--text-color);
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.scam-detail .email-match {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-family: monospace;
+    font-size: 14px;
+}
 
 .ad-container {
     background-color: var(--background-light);
