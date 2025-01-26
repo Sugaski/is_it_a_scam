@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Scam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="layout-container">
+        <div class="main-content">
+            <div class="container">
+                <h1><span class="glitch-container">Report a Scam</span></h1>
+                <p>Help others by reporting scam messages or suspicious emails you've encountered:</p>
+                
+                <div class="email-input-wrapper">
+                    <input type="email" id="scammerEmail" placeholder="Scammer's email address (if known)...">
+                </div>
+
+                <textarea id="scamText" placeholder="Paste the scam message here..."></textarea>
+                
+                <div class="email-input-wrapper">
+                    <input type="email" id="yourEmail" placeholder="Your email (optional, for updates)...">
+                </div>
+
+                <button id="submitReportButton">Submit Report</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scamModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p>Your report has been submitted successfully.</p>
+            <p>Together we can help prevent scams.</p>
+            <button id="closeModalButton">Close</button>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-button">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-text">Scan Text</span>
+            </a>
+            <a href="email.html" class="nav-button">
+                <span class="nav-icon">📧</span>
+                <span class="nav-text">Check Email Address</span>
+            </a>
+            <a href="report.html" class="nav-button active">
+                <span class="nav-icon">⚠️</span>
+                <span class="nav-text">Report Scam</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="main.obfuscated.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("ziXWYkldSGbZvqsWL");
+        })();
+        document.getElementById('submitReportButton').addEventListener('click', () => {
+            submitReport();
+        });
+        document.getElementById('closeModalButton').addEventListener('click', () => {
+            closeModal();
+        });
+    </script>
+</body>
+</html>

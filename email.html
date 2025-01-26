@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Email - Is it a scam?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="layout-container">
+        <div class="main-content">
+            <div class="container">
+                <h1><span class="glitch-container">Check Email Address</span></h1>
+                <p>Enter an email address to check if it's associated with known scams:</p>
+                <div class="email-input-wrapper">
+                    <input type="email" id="emailInput" placeholder="Enter email address...">
+                    <button id="checkEmailButton">Check Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scamModal" class="modal">
+        <div class="modal-content">
+            <h2>⚠️!</h2>
+            <p>This message matches known scam patterns.</p>
+            <div class="scam-details"></div>
+            <button id="closeModalButton">Close</button>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-button">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-text">Scan Text</span>
+            </a>
+            <a href="email.html" class="nav-button active">
+                <span class="nav-icon">📧</span>
+                <span class="nav-text">Check Email Address</span>
+            </a>
+            <a href="report.html" class="nav-button">
+                <span class="nav-icon">⚠️</span>
+                <span class="nav-text">Report Scam</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="main.obfuscated.js"></script>
+    <script>
+        document.getElementById('checkEmailButton').addEventListener('click', () => {
+            checkEmail();
+        });
+        document.getElementById('closeModalButton').addEventListener('click', () => {
+            closeModal();
+        });
+    </script>
+</body>
+</html>
